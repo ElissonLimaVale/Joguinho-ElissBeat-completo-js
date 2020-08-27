@@ -178,7 +178,7 @@ obsDireita = {
             if(this.x + this.largura >= user.x && this.x <= user.x + user.largura && this.y + this.altura >= user.y && 
                 this.y   <= user.y + user.altura){
                 if(this.score > recordHard){
-                    localStorage.setItem("recordHard", this.score);
+                    localStorage.setItem("recordHard", obsCima.score);
                 }
                 estadoGame.pausado = 1;
                 gameOver();
