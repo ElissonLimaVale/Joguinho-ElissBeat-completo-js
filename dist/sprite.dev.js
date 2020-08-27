@@ -20,6 +20,9 @@ var user6 = new Sprite(250, 0, 50, 50);
 var user7 = new Sprite(300, 0, 50, 50);
 var user8 = new Sprite(350, 0, 50, 50);
 var user9 = new Sprite(400, 0, 50, 50);
+var user10 = new Sprite(450, 0, 50, 50);
+var user11 = new Sprite(500, 0, 50, 50);
+var user12 = new Sprite(550, 0, 50, 50);
 
 function Spire2(x, y, largura, altura) {
   this.x = x;

@@ -126,6 +126,18 @@ var user = {
       case 9:
         user9.desenha(this.x, this.y);
         break;
+
+      case 10:
+        user10.desenha(this.x, this.y);
+        break;
+
+      case 11:
+        user11.desenha(this.x, this.y);
+        break;
+
+      case 12:
+        user12.desenha(this.x, this.y);
+        break;
     }
   }
 },
@@ -164,7 +176,7 @@ var user = {
   },
   insere: function insere() {
     this.x = Math.floor(650 * Math.random());
-    this.person = Math.floor(9 * Math.random());
+    this.person = Math.floor(12 * Math.random());
   },
   desenha: function desenha() {
     switch (this.person) {
@@ -202,6 +214,18 @@ var user = {
 
       case 9:
         user9.desenha(this.x, this.y);
+        break;
+
+      case 10:
+        user10.desenha(this.x, this.y);
+        break;
+
+      case 11:
+        user11.desenha(this.x, this.y);
+        break;
+
+      case 12:
+        user12.desenha(this.x, this.y);
         break;
 
       default:
@@ -243,7 +267,7 @@ var user = {
   },
   insere: function insere() {
     this.y = Math.floor(450 * Math.random());
-    this.person = Math.floor(9 * Math.random());
+    this.person = Math.floor(12 * Math.random());
   },
   desenha: function desenha() {
     switch (this.person) {
@@ -283,8 +307,20 @@ var user = {
         user9.desenha(this.x, this.y);
         break;
 
+      case 10:
+        user10.desenha(this.x, this.y);
+        break;
+
+      case 11:
+        user11.desenha(this.x, this.y);
+        break;
+
+      case 12:
+        user12.desenha(this.x, this.y);
+        break;
+
       default:
-        user9.desenha(this.x, this.y);
+        user12.desenha(this.x, this.y);
         break;
     }
   }
@@ -466,7 +502,7 @@ function newperson(numero) {
   person = numero;
 }
 
-cont = Math.floor(8 * Math.random() + 5);
+cont = Math.floor(6 * Math.random() + 1);
 
 function entrada() {
   document.getElementById("contagem").innerHTML = cont;
