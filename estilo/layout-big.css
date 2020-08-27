@@ -1,0 +1,156 @@
+@media screen and (min-width: 1200px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    canvas{
+        border: 5px solid rgb(65, 161, 0);
+        border-radius: 20px;
+        margin: 20px;
+    }
+    body{
+        background-image:
+        linear-gradient(
+            to top,
+            rgba(255, 13, 13, 0.5),
+            rgba(217, 255, 0, 0.5)
+        );
+    }
+    /*###############################################################################################################
+    ###################################  Area de escolha de icone  ##################################################
+    ##################################################################################################################*/
+    .user{
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(0,0,0,.8);
+        position: absolute;
+        left: -300px;
+        transition: 1s;
+    }
+    .list li {
+        width: 80px;
+        height: 80px;
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+    }
+    .cor-fundo {
+        width: 100%;
+        height: 140px;
+        background-color: #000000e7;
+        position: absolute;
+        top: -140px;
+        transition: .5s;
+    }
+    .lista li {
+        width: 80px;
+        height: 80px;
+        border: 2px solid rgb(30, 255, 1);
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+    }
+    /*###############################################################################################################
+    ###################################  fim de escolha de icone  ##################################################
+    ##################################################################################################################*/
+    .menu {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 35%;
+        height: 100vh;
+        background-image:
+        linear-gradient(
+            to bottom,
+            rgb(235, 67, 67),
+            rgb(235, 224, 67)
+        );
+    }
+    .uli{
+        list-style: none;
+    }
+    .uli li{
+        list-style: none;
+        float: left;
+        margin: 10px;
+    }
+    .button_play {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0px;
+    }
+    .img01{
+        background: url('../imagens/play.png');
+        background-position: 100%;
+        background-size: 100%;
+    }
+    .img02{
+        background: url('../imagens/user.png');
+        background-position: 100%;
+        background-size: 100%;
+    }
+    .img03{
+        background: url('../imagens/color.png');
+        background-position: 100%;
+        background-size: 100%;
+    }
+    .img04{
+        background: url('../imagens/personagem01.png');
+        background-position: 100%;
+        background-size: 100%;
+    }
+    .img05{
+        background: url('../imagens/hard_off.png');
+        background-position: 100%;
+        background-size: 100%;
+    }
+    .button_play_text {
+        background-color: rgb(0, 92, 121);
+        padding-left: 20px;
+        border-bottom-left-radius: 40px;
+        border-top-left-radius: 40px;
+        width: 220px;
+        height: 80px;
+        margin: 0px;
+    }
+    .menu-text {
+        color: rgb(255, 255, 255);
+        font-family: impact;
+        font-size: 50px;
+        padding-top: 10px;
+    }
+}
+/*################################################################################################
+#########################  Tela de game over ########################################
+######################################################################################*/
+.colidiu {
+    width: 500px;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.787);
+    border-radius: 80px;
+    position: absolute;
+    left: 10%;
+    top: -70%;
+    transform: tranlate(-50%,-50%);
+    transition: 3s;
+}
+.over{
+    width: 500px;
+    position: relative;
+    top: 52%;
+    left: 48%;
+    transform: translate(-50%,-50%);
+}
+.novoJogo {
+    font-size: 28px;
+    font-family: impact;
+    background-color: rgb(0, 255, 13);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 8px 16px 8px 16px;
+    border: none;
+    position: relative;
+    left: 50%;
+    bottom: -28%;
+    transform: translate(-50%,-50%);
+}
