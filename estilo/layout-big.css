@@ -132,7 +132,7 @@
     left: 10%;
     top: -70%;
     transform: tranlate(-50%,-50%);
-    transition: 3s;
+    transition: 2s;
 }
 .over{
     width: 500px;

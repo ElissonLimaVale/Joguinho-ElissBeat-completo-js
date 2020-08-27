@@ -172,7 +172,6 @@ obsDireita = {
         altura: 50,
         gravidade: 0.25,
         velocidade: 0,
-        score: 0,
         person: 3,
         atualiza: function(){
             if(this.x + this.largura >= user.x && this.x <= user.x + user.largura && this.y + this.altura >= user.y && 
@@ -186,7 +185,6 @@ obsDireita = {
             }
             if(estadoGame.pausado == 0){
                 if(this.x >= 700){
-                    this.score += 1;
                     this.x = 0 - this.largura;
                     this.velocidade = 0;
                     this.insere();
@@ -243,7 +241,6 @@ function reset(){
     obsCima.x = Math.floor(650 * Math.random());
     obsCima.gravidade = 0.35;
     obsCima.velocidade = 0;
-    obsDireita.score = 0;
     obsDireita.x = - 50;
     obsDireita.y = Math.floor(450 * Math.random());
     obsDireita.gravidade = 0.25;
