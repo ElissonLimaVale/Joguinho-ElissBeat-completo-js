@@ -7,7 +7,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.931);
+    background: rgba(0, 0, 0, 0.931);
     display: flex;
     justify-content: center;
 }
@@ -83,7 +83,9 @@ ul li{
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.990);
+    background: url('../imagens/CapaGame02.png');
+    background-size: 100%;
+    background-position: 120%;
     transition: 3s;
  }
  .btnclick{
@@ -102,8 +104,8 @@ ul li{
  }
  .img-over{
     position: absolute;
-    width: 700px;
-    height: 400px;
+    width: 100%;
+    height: 100vh;
     left: 50%;
     top: 40%;
     transform: translate(-50%,-50%);
