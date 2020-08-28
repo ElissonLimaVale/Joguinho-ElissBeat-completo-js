@@ -83,7 +83,7 @@ ul li{
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: url('../imagens/CapaGame02.png');
+    background: url('../imagens/CapaGame.png');
     background-size: 100%;
     background-position: 120%;
     transition: 3s;
