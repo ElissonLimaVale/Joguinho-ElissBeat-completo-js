@@ -31,6 +31,13 @@ function Spire2(x, y, largura, altura) {
   this.altura = altura;
 
   this.desenha = function (xCanvas, yCanvas) {
-    contex.drawImage(imgOver, this.x, this.y, this.largura, this.altura, xCanvas, yCanvas, this.largura, this.altura);
+    contex.drawImage(imageFundo, this.x, this.y, this.largura, this.altura, xCanvas, yCanvas, this.largura, this.altura);
   };
 }
+
+var fundo01 = new Sprite02(0, 0, 700, 500);
+var fundo01 = new Sprite02(700, 0, 700, 500);
+var fundo01 = new Sprite02(1400, 0, 700, 500);
+var fundo01 = new Sprite02(2100, 0, 700, 500);
+var fundo01 = new Sprite02(2800, 0, 700, 500);
+var fundo01 = new Sprite02(3500, 0, 700, 500);

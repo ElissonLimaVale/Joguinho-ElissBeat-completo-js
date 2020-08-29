@@ -157,10 +157,16 @@ var user = {
         localStorage.setItem("record", this.score);
       }
 
+      if (estadoGame.hard == 1) {
+        if (obsCima.score > recordHard) {
+          localStorage.setItem("recordHard", obsCima.score);
+        }
+      }
+
       estadoGame.pausado = 1;
-      this.y += 5;
       gameOver();
       estadoGame.over();
+      user.y = this.y + this.altura;
     }
 
     if (this.y >= 500) {
@@ -251,6 +257,7 @@ var user = {
       estadoGame.pausado = 1;
       gameOver();
       estadoGame.over();
+      user.x = this.x + this.largura;
     }
 
     if (estadoGame.pausado == 0) {
