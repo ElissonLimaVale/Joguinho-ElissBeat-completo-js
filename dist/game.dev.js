@@ -15,11 +15,11 @@ var x = 80,
     recordHard = 0;
 Altura = window.innerHeight;
 Largura = window.innerWidth;
-cor_fundo = "rgb(0, 120, 180)";
+cor_fundo = 1;
 
 if (Largura >= 820) {
-  Largura = 700;
-  Altura = 500;
+  Largura = 690;
+  Altura = 490;
 }
 
 var estadoGame = {
@@ -33,7 +33,11 @@ var estadoGame = {
   jogar: function jogar() {
     if (this.pausado == 1) {
       this.pausado = 0;
-      this.iniciar = 0;
+
+      if (this.iniciar == 1) {
+        this.iniciar = 0;
+      }
+
       document.getElementById("playButton1").style = "background: url('imagens/pause.png');background-position: 100%;background-size: 100%;";
       document.getElementById("t1").innerHTML = "Pausar";
     } else {
@@ -46,8 +50,8 @@ var estadoGame = {
 // do jogador/usuario
 
 var user = {
-  x: 350,
-  y: 200,
+  x: Largura / 2 - 25,
+  y: Altura / 2 - 25,
   altura: 50,
   largura: 50,
   cor: "rgb(254,150,3)",
@@ -348,8 +352,8 @@ function reset() {
   estadoGame.pausado = 0;
   estadoGame.perdeu = 0;
   estadoGame.iniciar = 1;
-  user.x = 350;
-  user.y = 200;
+  user.x = Largura / 2 - user.largura / 2;
+  user.y = Altura / 2 - user.altura / 2;
   estadoGame.jogar();
   document.getElementById("t1").innerHTML = "Jogar";
   document.getElementById("gameover").style = "top: -70%;";
@@ -362,7 +366,9 @@ screen.height = Altura; //====
 
 contex = screen.getContext("2d");
 image = new Image();
-image.src = "imagens/ptodos.png"; // Inserindo o Canvas dentro de body/corpo da pagina
+image.src = "imagens/ptodos.png";
+imageFundo = new Image();
+imageFundo.src = "imagens/TodosFundos.png"; // Inserindo o Canvas dentro de body/corpo da pagina
 
 document.body.appendChild(screen); //Captura quais teclas são digitadas e chama a função
 // user.atualiza() apassando a tecla digitada como parâmetro.
@@ -370,30 +376,64 @@ document.body.appendChild(screen); //Captura quais teclas são digitadas e chama
 document.addEventListener("keydown", handleKeydown);
 
 function handleKeydown(event) {
-  if (event.keyCode == "32") {
-    user.atualiza(event.keyCode);
-  } else {
-    user.atualiza(event.key.toUpperCase());
+  if (estadoGame.pedeu != 1 || estadoGame.pausado != 1) {
+    if (event.keyCode == "32") {
+      user.atualiza(event.keyCode);
+    } else {
+      user.atualiza(event.key.toUpperCase());
+    }
   }
 } //=====
 
 
 function desenha() {
   // Renderisa a tela do jogo com  contexto do canvas
-  contex.fillStyle = cor_fundo;
-  contex.fillRect(0, 0, Largura, Altura); //====
-  // Chama a função responsavel por desenhar o usuario/jogador
+  switch (cor_fundo) {
+    case 1:
+      fundo01.desenha(-10, -5);
+      break;
 
-  contex.fillStyle = "#fff";
+    case 2:
+      fundo02.desenha(-10, -5);
+      break;
+
+    case 3:
+      fundo03.desenha(-10, -5);
+      break;
+
+    case 4:
+      fundo04.desenha(-10, -5);
+      break;
+
+    case 5:
+      fundo05.desenha(-10, -5);
+      break;
+
+    case 6:
+      fundo06.desenha(-10, -5);
+      break;
+
+    default:
+      fundo01.desenha(-10, -5);
+  } //====
+
+
+  var coloral = "#fff";
+
+  if (cor_fundo == 1) {
+    coloral = "rgba(0,0,0,.8)";
+  }
+
+  contex.fillStyle = coloral;
   contex.font = "20px Franklin Gothic";
-  contex.fillText("Pontos: " + obsCima.score, 30, 30);
+  contex.fillText("Pontos: " + obsCima.score, 20, 30);
   record = localStorage.getItem("record");
 
   if (record == null) {
     record = 0;
   }
 
-  contex.fillStyle = "#fff";
+  contex.fillStyle = coloral;
   contex.font = "20px Franklin Gothic";
   contex.fillText("Record: " + record, 20, 480);
   recordHard = localStorage.getItem("recordHard");
@@ -402,9 +442,9 @@ function desenha() {
     recordHard = 0;
   }
 
-  contex.fillStyle = "#fff";
+  contex.fillStyle = coloral;
   contex.font = "20px Franklin Gothic";
-  contex.border = "1px solid green";
+  contex.getItem;
   contex.fillText("| Record Hard: " + recordHard, 130, 480);
   user.desenha(); //====
 
@@ -415,13 +455,13 @@ function desenha() {
 function atualiza() {
   frame++;
 
-  if (estadoGame.pausado == 0) {
+  if (estadoGame.pausado == 0 && estadoGame.iniciar == 0) {
     user.atualiza();
     obsCima.atualiza();
-  }
 
-  if (estadoGame.hard == 1) {
-    obsDireita.atualiza();
+    if (estadoGame.hard == 1) {
+      obsDireita.atualiza();
+    }
   }
 }
 
@@ -464,31 +504,7 @@ function loadingDica() {
 }
 
 function colorBack(color) {
-  switch (color) {
-    case 1:
-      cor_fundo = "rgba(0, 126, 126, 0.431)";
-      break;
-
-    case 2:
-      cor_fundo = "rgba(82, 158, 12, 0.541)";
-      break;
-
-    case 3:
-      cor_fundo = "rgba(47, 54, 156, 0.623)";
-      break;
-
-    case 4:
-      cor_fundo = "rgba(149, 45, 127, 0.555)";
-      break;
-
-    case 5:
-      cor_fundo = "rgba(148, 79, 40, 0.76)";
-      break;
-
-    case 6:
-      cor_fundo = "rgba(163, 33, 33, 0.616)";
-      break;
-  }
+  cor_fundo = color;
 }
 
 function hard() {
@@ -544,7 +560,7 @@ function initReproduz() {
 }
 
 function gamePlay() {
-  musicPlay = document.getElementById("id01");
+  musicPlay = document.getElementById("id05");
 
   if (estadoGame.iniciar == 0 || estadoGame.pausado == 0) {
     musicPlay.play();
