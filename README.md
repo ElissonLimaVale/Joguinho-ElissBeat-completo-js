@@ -6,8 +6,8 @@
 - [x] Integrar a um projeto já hospedado!
 - [x] O jogo esta hospedado na plataforma itch.io
 **Andamento:**
-Gestor de proj | Participações | Andameno | Data limite | Versão
---- | --- | --- | --- | ---
-Elisson Vale | 0 | 100% | 30/08 | 2.0
+Gestor de proj | Participações | Andameno | Data limite
+--- | --- | --- | ---
+Elisson Vale | 0 | 100% | 30/08
 
 **Participe deste projeto** :grinning:
