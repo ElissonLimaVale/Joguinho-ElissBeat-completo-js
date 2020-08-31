@@ -4,10 +4,11 @@
 - [x] Criar a base funcional **MVP**.
 - [x] Incluir imagens e aprimorar a aparência.
 - [x] Integrar a um projeto já hospedado!
-- [x] O jogo esta hospedado na plataforma itch.io
+- [x] O jogo está hospedado na plataforma itch.io
 **Andamento:**
-Gestor de proj | Participações | Andameno | Data limite
---- | --- | --- | ---
-Elisson Vale | 0 | 100% | 30/08
 
-**Participe deste projeto** :grinning:
+Gestor de proj | Participações | Andameno | Data limite | finalizado em
+--- | --- | --- | --- | ---
+Elisson Vale | 0 |  100% | 30/08/2020 | 28/08/2020
+
+**Contribua com este projeto** :grinning:
