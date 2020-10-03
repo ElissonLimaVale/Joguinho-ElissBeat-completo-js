@@ -12,4 +12,4 @@ Gestor de proj | Participações | Andameno | Data limite | finalizado em
 --- | --- | --- | --- | ---
 Elisson Vale | 0 |  100% | 30/08/2020 | 28/08/2020
 
-**Contribua com este projeto** com ideias ou feedback :grinning:
+**Contribua com este projeto com ideias ou feedback** :grinning:
