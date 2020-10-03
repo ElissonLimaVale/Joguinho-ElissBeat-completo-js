@@ -5,6 +5,7 @@
 - [x] Incluir imagens e aprimorar a aparência.
 - [x] Integrar a um projeto já hospedado!
 - [x] O jogo está hospedado na plataforma itch.io
+
 **Andamento:**
 
 Gestor de proj | Participações | Andameno | Data limite | finalizado em
