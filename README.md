@@ -5,10 +5,11 @@
 - [x] Incluir imagens e aprimorar a aparência.
 - [x] Integrar a um projeto já hospedado!
 - [x] O jogo está hospedado na plataforma itch.io
+
 **Andamento:**
 
 Gestor de proj | Participações | Andameno | Data limite | finalizado em
 --- | --- | --- | --- | ---
 Elisson Vale | 0 |  100% | 30/08/2020 | 28/08/2020
 
-**Contribua com este projeto** :grinning:
+**Contribua com este projeto com ideias ou feedback** :grinning:
